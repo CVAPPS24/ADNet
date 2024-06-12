@@ -21,11 +21,11 @@ we propose a novel atrophy disentanglement network (AD-Net), designed to decoupl
 
 To assess the reliability and robustness of AD-Net, we employ 5-fold cross-validation for all experiments. We repeat the 5-fold cross-validation process three times and calculate the mean and standard deviation of the validation set outcomes as the final results.
 
-1.[ADNet Model](.\disentangle_model)
+1.[ADNet Model](./disentangle_model)
 
-2.[Attention Model](.\disentangle_model\attention)
+2.[Attention Model](./disentangle_model/attention)
 
-3.[Ablation Model](.\disentangle_model\FE)
+3.[Ablation Model](./disentangle_model/FE)
 
 ## Results <a name="results"></a>
 
