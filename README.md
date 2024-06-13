@@ -27,7 +27,7 @@ To assess the reliability and robustness of AD-Net, we employ 5-fold cross-valid
 
 3.[Code for Ablation Model](./disentangle_model/FE)
 
-4.[Download ADNet Model Weights](https://pan.baidu.com/s/1NQnPHZ2LjT41zLQcF3Bbkw?pwd=2345) (提取码:2345)
+4.[Download ADNet Model Weights](https://pan.baidu.com/s/1NQnPHZ2LjT41zLQcF3Bbkw?pwd=2345)
 
 ## Results <a name="results"></a>
 
