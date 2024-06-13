@@ -17,15 +17,17 @@ we propose a novel atrophy disentanglement network (AD-Net), designed to decoupl
 
 ![](./AD-NET.png)
 
-## Models <a name="models"></a>
+## Model Implementations and Weights <a name="models"></a>
 
-To assess the reliability and robustness of AD-Net, we employ 5-fold cross-validation for all experiments. We repeat the 5-fold cross-validation process three times and calculate the mean and standard deviation of the validation set outcomes as the final results.
+To assess the reliability and robustness of AD-Net, we employ 5-fold cross-validation for all experiments. We repeat the 5-fold cross-validation process three times and calculate the mean and standard deviation of the validation set outcomes as the final results.Below are the sections containing the code for different experimental models:
 
-1.[ADNet Model](./disentangle_model)
+1.[Code for ADNet Model](./disentangle_model/disentangle_mhsa.py)
 
-2.[Attention Model](./disentangle_model/attention)
+2.[Code for Attention Model](./disentangle_model/attention)
 
-3.[Ablation Model](./disentangle_model/FE)
+3.[Code for Ablation Model](./disentangle_model/FE)
+
+4.[Download ADNet Model Weights](https://pan.baidu.com/s/1NQnPHZ2LjT41zLQcF3Bbkw?pwd=2345) (提取码:2345)
 
 ## Results <a name="results"></a>
 
@@ -43,32 +45,22 @@ To assess the reliability and robustness of AD-Net, we employ 5-fold cross-valid
 
 ## Get Started <a name="getstarted"></a>
 
-### 1. Configuring your enviroment:The training and testing experiments are conducted using Pytorch.
-
-For instance, you can use these codes to create an enviroment with our requirements.
-
-```sh
-conda create --name ADNet python=3.7
-source activate ADNet
-pip install -r requirements.txt
-```
-
-### 2. Downloading datasets from ADNI path.
+### 1. Downloading datasets from ADNI path.
 
 All sMRI images are screened at the baseline timepoint using 1.5T scanners following the T1-weighted MPRAGE protocol. Table I presents the demographic and clinical information of these subjects. The website is [ADNI](https://adni.loni.usc.edu/).
 
-### 3. Data preprocessing
+### 2. Data preprocessing
 
 For data preprocessing, we adopt the pipeline involving skull stripping, dura and neck removal, and affine registration using the tool of [FMRIB](https://fsl.fmrib.ox.ac.uk/). The affine registration aligns all sMRI images with the MNI152 template. Subsequently, we normalize all the sMRI images with the dimensions 160 × 160 × 160. Finally, we normalize the voxel values of all the sMRI image into the range 0 to 1.
 Next, generate a CSV file containing the paths of all brain images, along with their corresponding labels (e.g., 0 for AD, 1 for MCI, 2 for NC).
 
-### 4. Training code.
+### 3. Training code.
 
 ```python
 python train.py
 ```
 
-### 5. Testing code.
+### 4. Testing code.
 
 ```python
 python evaluate.py
@@ -89,14 +81,12 @@ adnet_code
   │   ├─ SOTA.PNG
   │   └─ T-SNE.png
   ├─AD-NET.png
-  ├─disentangle_mhsa.py
   ├─README.md
   ├─requirements.txt
   ├─train.py
   ├─t-sne.py
   └─until.py
 ```
-
 
 
 ### Acknowledgments
